@@ -437,6 +437,10 @@ int main(int argc, char *argv[]) {
 			size = 3;
 		} else if (!strcmp(argv[i], "-4096")) {
 			size = 4;
+		} else if (!strcmp(argv[i], "-8192")) {
+			size = 5;
+		} else if (!strcmp(argv[i], "-16384")) {
+			size = 6;
 		} else if (!strcmp(argv[i], "-20")) {
 			clock = 2;
 		} else if (!strcmp(argv[i], "-26.7")) {
@@ -491,7 +495,7 @@ int main(int argc, char *argv[]) {
 		print("          -boot1 = built for bootloader v1.1\r\n");
 		print("          -boot2 = built for bootloader v1.2+ (use for rBoot roms)\r\n");
 		print("          (elf file must have been linked appropriately for chosen option)\r\n");
-		print("        spi size (kb): -256 -512 -1024 -2048 -4096 (default -512)\r\n");
+		print("        spi size (kb): -256 -512 -1024 -2048 -4096 -8192 -16384 (default -512)\r\n");
 		print("        spi mode: -qio -qout -dio -dout (default -qio)\r\n");
 		print("        spi speed: -20 -26.7 -40 -80 (default -40)\r\n");
 		print("        include irom in checksum: -iromchksum (also needs enabling in rBoot)\r\n");
